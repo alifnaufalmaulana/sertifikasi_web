@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,15 +18,16 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+
+Route::get('/admin', )->name('admin.index');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ]);
 // Route::group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard',[AdminController::class, 'index'])->name('dashboard');
 
     Route::prefix('biodata')->group(function() {
         Route::get('/', 'BiodataController@index')->name('biodata.index');

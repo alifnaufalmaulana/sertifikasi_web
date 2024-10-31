@@ -17,25 +17,6 @@
                     </x-nav-link>
                 </div>
 
-                <!-- Navigation Biodata -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('disabilities.index') }}" :active="request()->routeIs('disabilities.index')">
-                        {{ __('Kebutuhan Khusus') }}
-                    </x-nav-link>
-                </div>
-
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('religions.index') }}" :active="request()->routeIs('religions.index')">
-                        {{ __('Agama') }}
-                    </x-nav-link>
-                </div>
-
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('ethnics.index') }}" :active="request()->routeIs('ethnics.index')">
-                        {{ __('Suku') }}
-                    </x-nav-link>
-                </div>
-
                 <div class="ml-3 relative">
                         
                     </div>
